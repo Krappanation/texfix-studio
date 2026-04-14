@@ -10,6 +10,8 @@ import BeamDecor from '@/components/BeamDecor'
 import PageTransition from '@/components/PageTransition'
 import Preloader from '@/components/Preloader'
 import { cn } from "@/lib/utils";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -97,6 +99,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
           <ScrollAnimations />
         </div>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
