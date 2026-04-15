@@ -1,0 +1,823 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - heading "Texfix Studio" [level=1] [ref=e4]
+    - heading "X" [level=1] [ref=e6]
+  - generic [ref=e7]:
+    - heading "Texfix Studio" [level=1] [ref=e9]
+    - heading "X" [level=1] [ref=e11]
+  - generic [ref=e12]:
+    - paragraph [ref=e14]: Built to Scale
+    - paragraph [ref=e16]: Your Vision, Shipped
+    - paragraph [ref=e18]: From Idea to Product
+  - generic [ref=e19]:
+    - navigation [ref=e20]:
+      - link "Home" [ref=e21] [cursor=pointer]:
+        - /url: /
+        - img [ref=e22]
+        - text: Home
+      - link "About" [ref=e25] [cursor=pointer]:
+        - /url: /about
+        - img [ref=e26]
+        - text: About
+      - link "Work" [ref=e29] [cursor=pointer]:
+        - /url: /work
+        - img [ref=e30]
+        - text: Work
+      - link "Contact" [ref=e33] [cursor=pointer]:
+        - /url: /contact
+        - img [ref=e34]
+        - text: Contact
+    - main [ref=e37]:
+      - generic [ref=e39]:
+        - generic [ref=e41]:
+          - generic:
+            - img
+          - generic [ref=e42]: Software Development Agency
+        - heading "CUSTOM SOFTWARE SOLUTIONS" [level=1] [ref=e43]:
+          - generic [ref=e44]:
+            - generic [ref=e46]: CUSTOM
+            - generic [ref=e48]: SOFTWARE
+          - generic [ref=e51]: SOLUTIONS
+        - generic [ref=e52]:
+          - paragraph [ref=e53]:
+            - generic [ref=e55]: Custom
+            - generic [ref=e57]: websites,
+            - generic [ref=e59]: apps,
+            - generic [ref=e61]: and
+            - generic [ref=e63]: software
+            - generic [ref=e65]: made
+            - generic [ref=e67]: to
+            - generic [ref=e69]: fit
+            - generic [ref=e71]: your
+            - generic [ref=e73]: vision.
+            - generic [ref=e74]:
+              - generic [ref=e76]: From
+              - generic [ref=e78]: a
+              - generic [ref=e80]: landing
+              - generic [ref=e82]: page
+              - generic [ref=e84]: to
+              - generic [ref=e86]: a
+              - generic [ref=e88]: full
+              - generic [ref=e90]: SaaS
+              - generic [ref=e92]: platform,
+              - generic [ref=e94]: we
+              - generic [ref=e96]: build
+              - generic [ref=e98]: it
+              - generic [ref=e100]: right.
+          - generic [ref=e101]:
+            - link "Show Our Work" [ref=e102] [cursor=pointer]:
+              - /url: /work
+              - generic [ref=e103]:
+                - text: Show Our Work
+                - img [ref=e104]
+            - button "Contact Us" [ref=e107] [cursor=pointer]:
+              - generic [ref=e109]: Contact Us
+      - generic [ref=e113]:
+        - generic [ref=e114]:
+          - generic [ref=e115]:
+            - generic [ref=e116]:
+              - generic [ref=e118]:
+                - generic:
+                  - img
+                - generic [ref=e119]: Philosophy
+              - heading "Engineered for Growth" [level=2] [ref=e120]:
+                - generic [ref=e121]:
+                  - generic [ref=e123]: Engineered
+                  - generic [ref=e125]: for
+                - generic [ref=e128]: Growth
+            - paragraph [ref=e129]: We don't just write code. We build digital infrastructure that scales with your ambition.
+          - generic [ref=e130]:
+            - link "Always Shipping Continuous delivery, total visibility — every sprint, every deploy, every win. See how we work" [ref=e131] [cursor=pointer]:
+              - /url: /about
+              - generic [ref=e133]:
+                - figure [ref=e135]:
+                  - generic [ref=e136]:
+                    - generic [ref=e138]: 🚀
+                    - generic [ref=e139]:
+                      - generic [ref=e140]:
+                        - generic [ref=e141]: Deployment live
+                        - generic [ref=e142]: ·
+                        - generic [ref=e143]: just now
+                      - paragraph [ref=e144]: texfix.dev · v2.1.0 shipped
+                - figure [ref=e146]:
+                  - generic [ref=e147]:
+                    - generic [ref=e149]: ✅
+                    - generic [ref=e150]:
+                      - generic [ref=e151]:
+                        - generic [ref=e152]: Sprint completed
+                        - generic [ref=e153]: ·
+                        - generic [ref=e154]: 2m ago
+                      - paragraph [ref=e155]: E-commerce platform · Phase 2
+                - figure [ref=e157]:
+                  - generic [ref=e158]:
+                    - generic [ref=e160]: 💬
+                    - generic [ref=e161]:
+                      - generic [ref=e162]:
+                        - generic [ref=e163]: Client approved
+                        - generic [ref=e164]: ·
+                        - generic [ref=e165]: 5m ago
+                      - paragraph [ref=e166]: Homepage redesign · Final review
+                - figure [ref=e168]:
+                  - generic [ref=e169]:
+                    - generic [ref=e171]: ⚡
+                    - generic [ref=e172]:
+                      - generic [ref=e173]:
+                        - generic [ref=e174]: Perf. milestone hit
+                        - generic [ref=e175]: ·
+                        - generic [ref=e176]: 12m ago
+                      - paragraph [ref=e177]: 98 / 100 Lighthouse · CWV green
+                - figure [ref=e179]:
+                  - generic [ref=e180]:
+                    - generic [ref=e182]: 🔒
+                    - generic [ref=e183]:
+                      - generic [ref=e184]:
+                        - generic [ref=e185]: Security audit passed
+                        - generic [ref=e186]: ·
+                        - generic [ref=e187]: 1h ago
+                      - paragraph [ref=e188]: 0 vulnerabilities · OWASP clean
+                - figure [ref=e190]:
+                  - generic [ref=e191]:
+                    - generic [ref=e193]: 📋
+                    - generic [ref=e194]:
+                      - generic [ref=e195]:
+                        - generic [ref=e196]: New project kicked off
+                        - generic [ref=e197]: ·
+                        - generic [ref=e198]: 2h ago
+                      - paragraph [ref=e199]: SaaS dashboard · 8-week roadmap
+              - generic:
+                - generic:
+                  - img
+                - heading "Always Shipping" [level=3]
+                - paragraph: Continuous delivery, total visibility — every sprint, every deploy, every win.
+              - generic:
+                - generic:
+                  - text: See how we work
+                  - img
+            - link "Available Worldwide We work with clients across every timezone — remote-first, async-ready, always reachable wherever you are. Work with us" [ref=e200] [cursor=pointer]:
+              - /url: /about
+              - generic:
+                - generic:
+                  - img
+                - heading "Available Worldwide" [level=3]
+                - paragraph: We work with clients across every timezone — remote-first, async-ready, always reachable wherever you are.
+              - generic:
+                - generic:
+                  - text: Work with us
+                  - img
+            - link "React Next.js TypeScript Node.js PostgreSQL React Next.js TypeScript Node.js PostgreSQL Tailwind Docker GraphQL AWS Prisma Tailwind Docker GraphQL AWS Prisma Redis Vercel GitHub Figma Stripe Redis Vercel GitHub Figma Stripe MongoDB Jest Storybook Linux Git MongoDB Jest Storybook Linux Git Full-Stack Expertise React, Next.js, Node, TypeScript, PostgreSQL, AWS and more — your entire stack, mastered. Explore capabilities" [ref=e204] [cursor=pointer]:
+              - /url: /about
+              - generic [ref=e207]:
+                - generic [ref=e208]:
+                  - generic [ref=e211]: React
+                  - generic [ref=e214]: Next.js
+                  - generic [ref=e217]: TypeScript
+                  - generic [ref=e220]: Node.js
+                  - generic [ref=e223]: PostgreSQL
+                  - generic [ref=e226]: React
+                  - generic [ref=e229]: Next.js
+                  - generic [ref=e232]: TypeScript
+                  - generic [ref=e235]: Node.js
+                  - generic [ref=e238]: PostgreSQL
+                - generic [ref=e239]:
+                  - generic [ref=e242]: Tailwind
+                  - generic [ref=e245]: Docker
+                  - generic [ref=e248]: GraphQL
+                  - generic [ref=e251]: AWS
+                  - generic [ref=e254]: Prisma
+                  - generic [ref=e257]: Tailwind
+                  - generic [ref=e260]: Docker
+                  - generic [ref=e263]: GraphQL
+                  - generic [ref=e266]: AWS
+                  - generic [ref=e269]: Prisma
+                - generic [ref=e270]:
+                  - generic [ref=e273]: Redis
+                  - generic [ref=e276]: Vercel
+                  - generic [ref=e279]: GitHub
+                  - generic [ref=e282]: Figma
+                  - generic [ref=e285]: Stripe
+                  - generic [ref=e288]: Redis
+                  - generic [ref=e291]: Vercel
+                  - generic [ref=e294]: GitHub
+                  - generic [ref=e297]: Figma
+                  - generic [ref=e300]: Stripe
+                - generic [ref=e301]:
+                  - generic [ref=e304]: MongoDB
+                  - generic [ref=e307]: Jest
+                  - generic [ref=e310]: Storybook
+                  - generic [ref=e313]: Linux
+                  - generic [ref=e316]: Git
+                  - generic [ref=e319]: MongoDB
+                  - generic [ref=e322]: Jest
+                  - generic [ref=e325]: Storybook
+                  - generic [ref=e328]: Linux
+                  - generic [ref=e331]: Git
+              - generic:
+                - generic:
+                  - img
+                - heading "Full-Stack Expertise" [level=3]
+                - paragraph: React, Next.js, Node, TypeScript, PostgreSQL, AWS and more — your entire stack, mastered.
+              - generic:
+                - generic:
+                  - text: Explore capabilities
+                  - img
+            - link "T Seamless Integrations Client brief in — Next.js, React, AI and cloud deployments out. We connect your vision to the full modern stack. Explore capabilities" [ref=e332] [cursor=pointer]:
+              - /url: /about
+              - generic [ref=e333]:
+                - img
+                - generic [ref=e334]:
+                  - img [ref=e337]
+                  - generic [ref=e342]: T
+                  - generic [ref=e343]:
+                    - img [ref=e346]
+                    - img [ref=e350]
+                    - img [ref=e353]
+                - img
+                - img
+                - img
+                - img
+                - img
+                - img
+              - generic:
+                - generic:
+                  - img
+                - heading "Seamless Integrations" [level=3]
+                - paragraph: Client brief in — Next.js, React, AI and cloud deployments out. We connect your vision to the full modern stack.
+              - generic:
+                - generic:
+                  - text: Explore capabilities
+                  - img
+        - generic [ref=e357]:
+          - generic [ref=e358]: React
+          - generic [ref=e359]: Node.js
+          - generic [ref=e360]: TypeScript
+          - generic [ref=e361]: Next.js
+          - generic [ref=e362]: Docker
+          - generic [ref=e363]: PostgreSQL
+          - generic [ref=e364]: AWS
+          - generic [ref=e365]: GraphQL
+          - generic [ref=e366]: Tailwind
+          - generic [ref=e367]: Figma
+          - generic [ref=e368]: Python
+          - generic [ref=e369]: Vercel
+          - generic [ref=e370]: React
+          - generic [ref=e371]: Node.js
+          - generic [ref=e372]: TypeScript
+          - generic [ref=e373]: Next.js
+          - generic [ref=e374]: Docker
+          - generic [ref=e375]: PostgreSQL
+          - generic [ref=e376]: AWS
+          - generic [ref=e377]: GraphQL
+          - generic [ref=e378]: Tailwind
+          - generic [ref=e379]: Figma
+          - generic [ref=e380]: Python
+          - generic [ref=e381]: Vercel
+      - generic [ref=e383]:
+        - generic [ref=e385]:
+          - generic:
+            - img
+          - generic [ref=e386]: What We Do
+        - heading "Services Built for Real Business Outcomes" [level=2] [ref=e387]:
+          - generic [ref=e388]:
+            - generic [ref=e390]: Services
+            - generic [ref=e392]: Built
+            - generic [ref=e394]: for
+          - generic [ref=e395]:
+            - generic [ref=e397]: Real
+            - generic [ref=e399]: Business
+            - generic [ref=e401]: Outcomes
+        - paragraph [ref=e402]: Custom software, web & mobile applications, and intelligent automation — engineered to scale your operations and accelerate growth.
+        - generic [ref=e403]:
+          - generic [ref=e404] [cursor=pointer]:
+            - img
+            - generic [ref=e405]:
+              - generic [ref=e406]:
+                - generic [ref=e407]: ( 01 )
+                - img [ref=e409]
+              - img [ref=e410]
+              - heading "Custom Software Development" [level=3] [ref=e414]
+              - paragraph [ref=e415]: Bespoke enterprise-grade software engineered for your exact requirements.
+          - generic [ref=e416] [cursor=pointer]:
+            - img
+            - generic [ref=e417]:
+              - generic [ref=e418]:
+                - generic [ref=e419]: ( 02 )
+                - img [ref=e421]
+              - img [ref=e422]
+              - heading "Web & Mobile Applications" [level=3] [ref=e424]
+              - paragraph [ref=e425]: High-performance web and mobile apps built for scale and user experience.
+          - generic [ref=e426] [cursor=pointer]:
+            - img
+            - generic [ref=e427]:
+              - generic [ref=e428]:
+                - generic [ref=e429]: ( 03 )
+                - img [ref=e431]
+              - img [ref=e432]
+              - heading "Business Automation" [level=3] [ref=e434]
+              - paragraph [ref=e435]: Automate repetitive workflows to save time, reduce errors, and cut costs.
+          - generic [ref=e436] [cursor=pointer]:
+            - img
+            - generic [ref=e437]:
+              - generic [ref=e438]:
+                - generic [ref=e439]: ( 04 )
+                - img [ref=e441]
+              - img [ref=e442]
+              - heading "Data Analytics & Dashboards" [level=3] [ref=e443]
+              - paragraph [ref=e444]: Turn raw data into real-time actionable business intelligence.
+      - generic [ref=e445]:
+        - generic [ref=e446]:
+          - generic [ref=e448]:
+            - generic:
+              - img
+            - generic [ref=e449]: Selected Work
+          - heading "Projects We're Proud Of" [level=2] [ref=e450]:
+            - generic [ref=e451]:
+              - generic [ref=e453]: Projects
+              - generic [ref=e455]: We're
+            - generic [ref=e456]:
+              - generic [ref=e458]: Proud
+              - generic [ref=e460]: Of
+          - paragraph [ref=e461]: A curated selection of software products we've designed and engineered — from MVPs to full-scale enterprise platforms.
+        - generic [ref=e462]:
+          - generic [ref=e463]:
+            - link "FactoryIQ AI-Powered Inventory System Enterprise Software" [ref=e464] [cursor=pointer]:
+              - /url: /work
+              - generic [ref=e465]:
+                - heading "FactoryIQ" [level=3] [ref=e466]
+                - generic [ref=e467]: AI-Powered Inventory System
+              - generic [ref=e468]: Enterprise Software
+            - link "Konsole Gaming Café Management Platform Custom Business Software" [ref=e469] [cursor=pointer]:
+              - /url: /work
+              - generic [ref=e470]:
+                - heading "Konsole" [level=3] [ref=e471]
+                - generic [ref=e472]: Gaming Café Management Platform
+              - generic [ref=e473]: Custom Business Software
+            - link "Tadj Alsihha Clinic Booking & Portfolio Healthcare Web Platform" [ref=e474] [cursor=pointer]:
+              - /url: /work
+              - generic [ref=e475]:
+                - heading "Tadj Alsihha" [level=3] [ref=e476]
+                - generic [ref=e477]: Clinic Booking & Portfolio
+              - generic [ref=e478]: Healthcare Web Platform
+            - link "Gloss Beauty Booking Platform Booking & Scheduling System" [ref=e479] [cursor=pointer]:
+              - /url: /work
+              - generic [ref=e480]:
+                - heading "Gloss" [level=3] [ref=e481]
+                - generic [ref=e482]: Beauty Booking Platform
+              - generic [ref=e483]: Booking & Scheduling System
+          - generic:
+            - generic:
+              - img "FactoryIQ"
+            - generic:
+              - img "Konsole"
+            - generic:
+              - img "Tadj Alsihha"
+            - generic:
+              - img "Gloss"
+      - generic [ref=e485]:
+        - generic [ref=e486]:
+          - generic [ref=e488]:
+            - generic:
+              - img
+            - generic [ref=e489]: Methodology
+          - heading "Our Development Process" [level=2] [ref=e490]:
+            - generic [ref=e493]: Our
+            - generic [ref=e494]:
+              - generic [ref=e496]: Development
+              - generic [ref=e498]: Process
+          - paragraph [ref=e499]: From discovery to deployment, every project follows a structured, transparent process — so you always know what's being built, why, and when it ships.
+        - generic [ref=e500]:
+          - generic [ref=e502]:
+            - generic [ref=e503]: STEP 01
+            - generic [ref=e505]:
+              - generic [ref=e507]:
+                - generic [ref=e508]: R
+                - generic [ref=e509]:
+                  - generic [ref=e510]:
+                    - generic [ref=e511]: Requirements
+                    - generic [ref=e512]: 2m ago
+                  - generic [ref=e513]: Project scope document ready
+              - generic [ref=e515]:
+                - generic [ref=e516]: S
+                - generic [ref=e517]:
+                  - generic [ref=e518]:
+                    - generic [ref=e519]: Strategy
+                    - generic [ref=e520]: 5m ago
+                  - generic [ref=e521]: "Tech stack confirmed: Next.js"
+              - generic [ref=e523]:
+                - generic [ref=e524]: C
+                - generic [ref=e525]:
+                  - generic [ref=e526]:
+                    - generic [ref=e527]: Client
+                    - generic [ref=e528]: 10m ago
+                  - generic [ref=e529]: Budget approved. Ready to go!
+              - generic [ref=e531]:
+                - generic [ref=e532]: D
+                - generic [ref=e533]:
+                  - generic [ref=e534]:
+                    - generic [ref=e535]: Design
+                    - generic [ref=e536]: 15m ago
+                  - generic [ref=e537]: Wireframes shared for review
+              - generic [ref=e539]:
+                - generic [ref=e540]: T
+                - generic [ref=e541]:
+                  - generic [ref=e542]:
+                    - generic [ref=e543]: Timeline
+                    - generic [ref=e544]: 20m ago
+                  - generic [ref=e545]: Sprint 1 starts Monday
+              - generic [ref=e547]:
+                - generic [ref=e548]: A
+                - generic [ref=e549]:
+                  - generic [ref=e550]:
+                    - generic [ref=e551]: API
+                    - generic [ref=e552]: 25m ago
+                  - generic [ref=e553]: Third-party integrations mapped
+              - generic [ref=e555]:
+                - generic [ref=e556]: S
+                - generic [ref=e557]:
+                  - generic [ref=e558]:
+                    - generic [ref=e559]: Security
+                    - generic [ref=e560]: 30m ago
+                  - generic [ref=e561]: Auth flow architecture done
+            - heading "Discovery & Planning" [level=3] [ref=e562]
+            - paragraph [ref=e563]: We analyze requirements, define architecture, and design technical specifications.
+          - generic [ref=e565]:
+            - generic [ref=e566]: STEP 02
+            - generic [ref=e568]:
+              - generic [ref=e573]: bash
+              - generic [ref=e576]: ❯
+            - heading "Development & Testing" [level=3] [ref=e578]
+            - paragraph [ref=e579]: We build the solution, maintain communication, and perform quality testing.
+          - generic [ref=e581]:
+            - generic [ref=e582]: STEP 03
+            - generic [ref=e584]:
+              - generic [ref=e586]:
+                - img [ref=e587]
+                - img [ref=e599]
+              - generic [ref=e613]: PRE-LAUNCH
+              - generic [ref=e614]:
+                - generic [ref=e615]: deploy pipeline
+                - generic [ref=e616]: v2.4.1
+            - heading "Deployment & Support" [level=3] [ref=e617]
+            - paragraph [ref=e618]: We deploy to production, train staff, and provide ongoing maintenance.
+      - generic [ref=e620]:
+        - generic [ref=e621]:
+          - generic [ref=e623]:
+            - generic:
+              - img
+            - generic [ref=e624]: Client Results
+          - heading "Real Results, Real Clients" [level=2] [ref=e625]:
+            - generic [ref=e626]:
+              - generic [ref=e628]: Real
+              - generic [ref=e630]: Results,
+              - generic [ref=e632]: Real
+            - generic [ref=e635]: Clients
+          - paragraph [ref=e636]: Businesses across industries trust TexFix to deliver software that performs. Here's what our clients say after working with us.
+        - generic [ref=e637]:
+          - generic [ref=e639]:
+            - figure [ref=e640]:
+              - generic [ref=e641]:
+                - generic [ref=e642]: KB
+                - generic [ref=e643]:
+                  - generic [ref=e644]: Karim Benali
+                  - paragraph [ref=e645]: Fondateur
+                - generic [ref=e646]:
+                  - img [ref=e648]
+                  - generic [ref=e651]: E-commerce
+              - blockquote [ref=e653]: “TexFix nous a construit une boutique en ligne sur mesure qui a complètement changé notre façon de vendre. Simple, rapide, et exactement ce dont on avait besoin.”
+            - figure [ref=e654]:
+              - generic [ref=e655]:
+                - generic [ref=e656]: JW
+                - generic [ref=e657]:
+                  - generic [ref=e658]: James Whitfield
+                  - paragraph [ref=e659]: Founder
+                - generic [ref=e660]:
+                  - img [ref=e662]
+                  - generic [ref=e665]: Web Platform
+              - blockquote [ref=e667]: “I came with a rough idea and they turned it into a full web platform. The attention to detail and the quality of the code genuinely surprised me. Couldn't ask for better.”
+            - figure [ref=e668]:
+              - generic [ref=e669]:
+                - generic [ref=e670]: YH
+                - generic [ref=e671]:
+                  - generic [ref=e672]: Yasmine Hadj
+                  - paragraph [ref=e673]: Directrice
+                - generic [ref=e674]:
+                  - img [ref=e676]
+                  - generic [ref=e681]: Dashboard
+              - blockquote [ref=e683]: “Notre plateforme de gestion a été livrée dans les délais et fonctionne parfaitement. L'équipe a vraiment pris le temps de comprendre notre activité avant de commencer.”
+            - figure [ref=e684]:
+              - generic [ref=e685]:
+                - generic [ref=e686]: LH
+                - generic [ref=e687]:
+                  - generic [ref=e688]: Lena Hoffmann
+                  - paragraph [ref=e689]: Co-founder
+                - generic [ref=e690]:
+                  - img [ref=e692]
+                  - generic [ref=e694]: Client Portal
+              - blockquote [ref=e696]: “TexFix built our client portal from scratch and it works flawlessly. Our users love how intuitive it feels, and we've had zero issues since launch. Impressive work.”
+            - figure [ref=e697]:
+              - generic [ref=e698]:
+                - generic [ref=e699]: SM
+                - generic [ref=e700]:
+                  - generic [ref=e701]: Sofiane Meziane
+                  - paragraph [ref=e702]: CEO
+                - generic [ref=e703]:
+                  - img [ref=e705]
+                  - generic [ref=e707]: Web App
+              - blockquote [ref=e709]: “L'application web qu'ils ont développée pour notre logistique a simplifié des processus qu'on gérait manuellement depuis des années. Un vrai gain au quotidien.”
+            - figure [ref=e710]:
+              - generic [ref=e711]:
+                - generic [ref=e712]: OK
+                - generic [ref=e713]:
+                  - generic [ref=e714]: Omar Khalil
+                  - paragraph [ref=e715]: Founder
+                - generic [ref=e716]:
+                  - img [ref=e718]
+                  - generic [ref=e722]: E-commerce
+              - blockquote [ref=e724]: “They delivered a polished e-commerce site that represents our brand perfectly. The whole process was smooth, communication was great, and the result speaks for itself.”
+            - figure [ref=e725]:
+              - generic [ref=e726]:
+                - generic [ref=e727]: KB
+                - generic [ref=e728]:
+                  - generic [ref=e729]: Karim Benali
+                  - paragraph [ref=e730]: Fondateur
+                - generic [ref=e731]:
+                  - img [ref=e733]
+                  - generic [ref=e736]: E-commerce
+              - blockquote [ref=e738]: “TexFix nous a construit une boutique en ligne sur mesure qui a complètement changé notre façon de vendre. Simple, rapide, et exactement ce dont on avait besoin.”
+            - figure [ref=e739]:
+              - generic [ref=e740]:
+                - generic [ref=e741]: JW
+                - generic [ref=e742]:
+                  - generic [ref=e743]: James Whitfield
+                  - paragraph [ref=e744]: Founder
+                - generic [ref=e745]:
+                  - img [ref=e747]
+                  - generic [ref=e750]: Web Platform
+              - blockquote [ref=e752]: “I came with a rough idea and they turned it into a full web platform. The attention to detail and the quality of the code genuinely surprised me. Couldn't ask for better.”
+            - figure [ref=e753]:
+              - generic [ref=e754]:
+                - generic [ref=e755]: YH
+                - generic [ref=e756]:
+                  - generic [ref=e757]: Yasmine Hadj
+                  - paragraph [ref=e758]: Directrice
+                - generic [ref=e759]:
+                  - img [ref=e761]
+                  - generic [ref=e766]: Dashboard
+              - blockquote [ref=e768]: “Notre plateforme de gestion a été livrée dans les délais et fonctionne parfaitement. L'équipe a vraiment pris le temps de comprendre notre activité avant de commencer.”
+            - figure [ref=e769]:
+              - generic [ref=e770]:
+                - generic [ref=e771]: LH
+                - generic [ref=e772]:
+                  - generic [ref=e773]: Lena Hoffmann
+                  - paragraph [ref=e774]: Co-founder
+                - generic [ref=e775]:
+                  - img [ref=e777]
+                  - generic [ref=e779]: Client Portal
+              - blockquote [ref=e781]: “TexFix built our client portal from scratch and it works flawlessly. Our users love how intuitive it feels, and we've had zero issues since launch. Impressive work.”
+            - figure [ref=e782]:
+              - generic [ref=e783]:
+                - generic [ref=e784]: SM
+                - generic [ref=e785]:
+                  - generic [ref=e786]: Sofiane Meziane
+                  - paragraph [ref=e787]: CEO
+                - generic [ref=e788]:
+                  - img [ref=e790]
+                  - generic [ref=e792]: Web App
+              - blockquote [ref=e794]: “L'application web qu'ils ont développée pour notre logistique a simplifié des processus qu'on gérait manuellement depuis des années. Un vrai gain au quotidien.”
+            - figure [ref=e795]:
+              - generic [ref=e796]:
+                - generic [ref=e797]: OK
+                - generic [ref=e798]:
+                  - generic [ref=e799]: Omar Khalil
+                  - paragraph [ref=e800]: Founder
+                - generic [ref=e801]:
+                  - img [ref=e803]
+                  - generic [ref=e807]: E-commerce
+              - blockquote [ref=e809]: “They delivered a polished e-commerce site that represents our brand perfectly. The whole process was smooth, communication was great, and the result speaks for itself.”
+          - generic [ref=e811]:
+            - figure [ref=e812]:
+              - generic [ref=e813]:
+                - generic [ref=e814]: KB
+                - generic [ref=e815]:
+                  - generic [ref=e816]: Karim Benali
+                  - paragraph [ref=e817]: Fondateur
+                - generic [ref=e818]:
+                  - img [ref=e820]
+                  - generic [ref=e823]: E-commerce
+              - blockquote [ref=e825]: “TexFix nous a construit une boutique en ligne sur mesure qui a complètement changé notre façon de vendre. Simple, rapide, et exactement ce dont on avait besoin.”
+            - figure [ref=e826]:
+              - generic [ref=e827]:
+                - generic [ref=e828]: JW
+                - generic [ref=e829]:
+                  - generic [ref=e830]: James Whitfield
+                  - paragraph [ref=e831]: Founder
+                - generic [ref=e832]:
+                  - img [ref=e834]
+                  - generic [ref=e837]: Web Platform
+              - blockquote [ref=e839]: “I came with a rough idea and they turned it into a full web platform. The attention to detail and the quality of the code genuinely surprised me. Couldn't ask for better.”
+            - figure [ref=e840]:
+              - generic [ref=e841]:
+                - generic [ref=e842]: YH
+                - generic [ref=e843]:
+                  - generic [ref=e844]: Yasmine Hadj
+                  - paragraph [ref=e845]: Directrice
+                - generic [ref=e846]:
+                  - img [ref=e848]
+                  - generic [ref=e853]: Dashboard
+              - blockquote [ref=e855]: “Notre plateforme de gestion a été livrée dans les délais et fonctionne parfaitement. L'équipe a vraiment pris le temps de comprendre notre activité avant de commencer.”
+            - figure [ref=e856]:
+              - generic [ref=e857]:
+                - generic [ref=e858]: LH
+                - generic [ref=e859]:
+                  - generic [ref=e860]: Lena Hoffmann
+                  - paragraph [ref=e861]: Co-founder
+                - generic [ref=e862]:
+                  - img [ref=e864]
+                  - generic [ref=e866]: Client Portal
+              - blockquote [ref=e868]: “TexFix built our client portal from scratch and it works flawlessly. Our users love how intuitive it feels, and we've had zero issues since launch. Impressive work.”
+            - figure [ref=e869]:
+              - generic [ref=e870]:
+                - generic [ref=e871]: SM
+                - generic [ref=e872]:
+                  - generic [ref=e873]: Sofiane Meziane
+                  - paragraph [ref=e874]: CEO
+                - generic [ref=e875]:
+                  - img [ref=e877]
+                  - generic [ref=e879]: Web App
+              - blockquote [ref=e881]: “L'application web qu'ils ont développée pour notre logistique a simplifié des processus qu'on gérait manuellement depuis des années. Un vrai gain au quotidien.”
+            - figure [ref=e882]:
+              - generic [ref=e883]:
+                - generic [ref=e884]: OK
+                - generic [ref=e885]:
+                  - generic [ref=e886]: Omar Khalil
+                  - paragraph [ref=e887]: Founder
+                - generic [ref=e888]:
+                  - img [ref=e890]
+                  - generic [ref=e894]: E-commerce
+              - blockquote [ref=e896]: “They delivered a polished e-commerce site that represents our brand perfectly. The whole process was smooth, communication was great, and the result speaks for itself.”
+            - figure [ref=e897]:
+              - generic [ref=e898]:
+                - generic [ref=e899]: KB
+                - generic [ref=e900]:
+                  - generic [ref=e901]: Karim Benali
+                  - paragraph [ref=e902]: Fondateur
+                - generic [ref=e903]:
+                  - img [ref=e905]
+                  - generic [ref=e908]: E-commerce
+              - blockquote [ref=e910]: “TexFix nous a construit une boutique en ligne sur mesure qui a complètement changé notre façon de vendre. Simple, rapide, et exactement ce dont on avait besoin.”
+            - figure [ref=e911]:
+              - generic [ref=e912]:
+                - generic [ref=e913]: JW
+                - generic [ref=e914]:
+                  - generic [ref=e915]: James Whitfield
+                  - paragraph [ref=e916]: Founder
+                - generic [ref=e917]:
+                  - img [ref=e919]
+                  - generic [ref=e922]: Web Platform
+              - blockquote [ref=e924]: “I came with a rough idea and they turned it into a full web platform. The attention to detail and the quality of the code genuinely surprised me. Couldn't ask for better.”
+            - figure [ref=e925]:
+              - generic [ref=e926]:
+                - generic [ref=e927]: YH
+                - generic [ref=e928]:
+                  - generic [ref=e929]: Yasmine Hadj
+                  - paragraph [ref=e930]: Directrice
+                - generic [ref=e931]:
+                  - img [ref=e933]
+                  - generic [ref=e938]: Dashboard
+              - blockquote [ref=e940]: “Notre plateforme de gestion a été livrée dans les délais et fonctionne parfaitement. L'équipe a vraiment pris le temps de comprendre notre activité avant de commencer.”
+            - figure [ref=e941]:
+              - generic [ref=e942]:
+                - generic [ref=e943]: LH
+                - generic [ref=e944]:
+                  - generic [ref=e945]: Lena Hoffmann
+                  - paragraph [ref=e946]: Co-founder
+                - generic [ref=e947]:
+                  - img [ref=e949]
+                  - generic [ref=e951]: Client Portal
+              - blockquote [ref=e953]: “TexFix built our client portal from scratch and it works flawlessly. Our users love how intuitive it feels, and we've had zero issues since launch. Impressive work.”
+            - figure [ref=e954]:
+              - generic [ref=e955]:
+                - generic [ref=e956]: SM
+                - generic [ref=e957]:
+                  - generic [ref=e958]: Sofiane Meziane
+                  - paragraph [ref=e959]: CEO
+                - generic [ref=e960]:
+                  - img [ref=e962]
+                  - generic [ref=e964]: Web App
+              - blockquote [ref=e966]: “L'application web qu'ils ont développée pour notre logistique a simplifié des processus qu'on gérait manuellement depuis des années. Un vrai gain au quotidien.”
+            - figure [ref=e967]:
+              - generic [ref=e968]:
+                - generic [ref=e969]: OK
+                - generic [ref=e970]:
+                  - generic [ref=e971]: Omar Khalil
+                  - paragraph [ref=e972]: Founder
+                - generic [ref=e973]:
+                  - img [ref=e975]
+                  - generic [ref=e979]: E-commerce
+              - blockquote [ref=e981]: “They delivered a polished e-commerce site that represents our brand perfectly. The whole process was smooth, communication was great, and the result speaks for itself.”
+      - generic [ref=e982]:
+        - generic:
+          - heading "Let's Build Something Great" [level=2]:
+            - generic: Let's Build
+            - generic: Something Great
+        - generic:
+          - generic:
+            - generic:
+              - paragraph: Web Apps
+          - generic:
+            - generic:
+              - paragraph: Mobile
+          - generic:
+            - generic:
+              - paragraph: AI & Automation
+          - generic:
+            - generic:
+              - paragraph: Websites
+          - generic:
+            - generic:
+              - paragraph: SaaS Platforms
+          - generic:
+            - generic:
+              - paragraph: E-Commerce
+          - generic:
+            - generic:
+              - paragraph: Custom Software
+        - link "Get in Touch" [ref=e984] [cursor=pointer]:
+          - /url: /contact
+          - generic [ref=e985]:
+            - text: Get in Touch
+            - img [ref=e986]
+        - generic:
+          - generic:
+            - heading "Let's Build Something Great" [level=2]:
+              - generic: Let's Build
+              - generic: Something Great
+            - paragraph:
+              - text: Ready to turn your idea into a product that scales?
+              - text: Let's talk — no commitment required.
+    - contentinfo [ref=e988]:
+      - generic [ref=e989]:
+        - generic [ref=e990]:
+          - generic [ref=e991]:
+            - paragraph [ref=e992]: TexFix
+            - paragraph [ref=e993]: We Build What Moves Businesses.
+          - generic [ref=e994]:
+            - link "Facebook" [ref=e995] [cursor=pointer]:
+              - /url: https://www.facebook.com/profile.php?id=61585389652103&locale=fr_FR
+              - generic "Facebook" [ref=e996]:
+                - img [ref=e997]
+            - link "Instagram" [ref=e1000] [cursor=pointer]:
+              - /url: https://www.instagram.com/texfix.agency/
+              - generic "Instagram" [ref=e1001]:
+                - img [ref=e1002]
+            - link "TikTok" [ref=e1005] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@texfixstdio?lang=fr
+              - generic "TikTok" [ref=e1006]:
+                - img [ref=e1007]
+        - generic [ref=e1009]:
+          - generic [ref=e1010]:
+            - paragraph [ref=e1011]: Quick Links
+            - list [ref=e1012]:
+              - listitem [ref=e1013]:
+                - link "Home" [ref=e1014] [cursor=pointer]:
+                  - /url: /#home
+              - listitem [ref=e1015]:
+                - link "About" [ref=e1016] [cursor=pointer]:
+                  - /url: /#about
+              - listitem [ref=e1017]:
+                - link "Services" [ref=e1018] [cursor=pointer]:
+                  - /url: /#services
+              - listitem [ref=e1019]:
+                - link "Projects" [ref=e1020] [cursor=pointer]:
+                  - /url: /#projects
+              - listitem [ref=e1021]:
+                - link "Process" [ref=e1022] [cursor=pointer]:
+                  - /url: /#process
+              - listitem [ref=e1023]:
+                - link "Testimonials" [ref=e1024] [cursor=pointer]:
+                  - /url: /#testimonials
+              - listitem [ref=e1025]:
+                - link "Contact" [ref=e1026] [cursor=pointer]:
+                  - /url: /#contact
+          - generic [ref=e1027]:
+            - paragraph [ref=e1028]: Pages
+            - list [ref=e1029]:
+              - listitem [ref=e1030]:
+                - link "Home" [ref=e1031] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e1032]:
+                - link "About" [ref=e1033] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e1034]:
+                - link "Work" [ref=e1035] [cursor=pointer]:
+                  - /url: /work
+              - listitem [ref=e1036]:
+                - link "Contact" [ref=e1037] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e1038]:
+                - link "Privacy Policy" [ref=e1039] [cursor=pointer]:
+                  - /url: /privacy
+      - generic:
+        - paragraph: TEXFIX
+      - generic [ref=e1040]:
+        - paragraph [ref=e1041]: Made by TexFix Studio
+        - paragraph [ref=e1042]: TexFix © 2026 — All rights reserved
