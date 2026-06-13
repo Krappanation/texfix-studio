@@ -34,11 +34,22 @@ function BuildTerminal() {
   const [typing, setTyping]     = useState('')
   const [cursor, setCursor]     = useState(true)
   const scrollRef               = useRef<HTMLDivElement>(null)
+  const containerRef            = useRef<HTMLDivElement>(null)
+  const visibleRef              = useRef(false)   // is the card currently on-screen?
 
-  // blink cursor
+  // blink cursor — only ticks when visible
   useEffect(() => {
-    const t = setInterval(() => setCursor(v => !v), 530)
-    return () => clearInterval(t)
+    let t: ReturnType<typeof setInterval>
+    const obs = new IntersectionObserver(([e]) => {
+      visibleRef.current = e.isIntersecting
+      if (e.isIntersecting) {
+        t = setInterval(() => setCursor(v => !v), 530)
+      } else {
+        clearInterval(t)
+      }
+    }, { threshold: 0 })
+    if (containerRef.current) obs.observe(containerRef.current)
+    return () => { obs.disconnect(); clearInterval(t) }
   }, [])
 
   // auto-scroll within container only
@@ -48,36 +59,39 @@ function BuildTerminal() {
     }
   }, [history, typing])
 
-  // sequencer
+  // sequencer — pauses when scrolled away
   useEffect(() => {
     let cancelled = false
     const delay = (ms: number) => new Promise<void>(r => setTimeout(r, ms))
+    const waitVisible = () => new Promise<void>(r => {
+      if (visibleRef.current) { r(); return }
+      const id = setInterval(() => { if (visibleRef.current) { clearInterval(id); r() } }, 200)
+    })
 
     async function run() {
       await delay(400)
       while (!cancelled) {
+        await waitVisible()          // pause loop until card is on-screen
         for (const { cmd, out } of BUILD_SEQUENCE) {
-          // type command
           for (let i = 0; i <= cmd.length; i++) {
             if (cancelled) return
+            await waitVisible()
             setTyping(cmd.slice(0, i))
             await delay(TYPE_MS + Math.random() * 20)
           }
           await delay(120)
           if (cancelled) return
-          // commit command line
           setHistory(h => [...h, { kind: 'cmd', text: cmd }])
           setTyping('')
           await delay(OUTPUT_MS)
-          // print output lines
           for (const line of out) {
             if (cancelled) return
+            await waitVisible()
             setHistory(h => [...h, { kind: 'out', text: line }])
             await delay(OUTPUT_MS)
           }
           await delay(PAUSE_MS)
         }
-        // done — hold then reset
         await delay(DONE_MS)
         if (cancelled) return
         setHistory([])
@@ -90,7 +104,7 @@ function BuildTerminal() {
   }, [])
 
   return (
-    <div className="w-full h-full flex flex-col bg-[#0a0a0a] overflow-hidden font-mono text-[11px] select-none">
+    <div ref={containerRef} className="w-full h-full flex flex-col bg-[#0a0a0a] overflow-hidden font-mono text-[11px] select-none">
       {/* Title bar */}
       <div className="flex items-center gap-1.5 px-3 py-2 border-b border-white/5 flex-shrink-0">
         <span className="w-2.5 h-2.5 rounded-full bg-zinc-700"/>
@@ -142,10 +156,27 @@ const STARS = [
 function RocketLaunch() {
   const [phase, setPhase] = useState<DeployPhase>('idle')
   const [tick, setTick]   = useState(0)
+  const containerRef      = useRef<HTMLDivElement>(null)
+  const visibleRef        = useRef(false)
+
+  // IntersectionObserver — stop all timers when off-screen
+  useEffect(() => {
+    const obs = new IntersectionObserver(([e]) => {
+      visibleRef.current = e.isIntersecting
+    }, { threshold: 0 })
+    if (containerRef.current) obs.observe(containerRef.current)
+    return () => obs.disconnect()
+  }, [])
 
   useEffect(() => {
     let t: ReturnType<typeof setTimeout>
     const go = (p: DeployPhase) => {
+      if (!visibleRef.current && p !== 'idle') {
+        // If off-screen, reset to idle and wait
+        setPhase('idle'); setTick(0)
+        t = setTimeout(() => go('idle'), 500)
+        return
+      }
       setPhase(p); setTick(0)
       if (p === 'idle')   t = setTimeout(() => go('launch'), 1600)
       if (p === 'launch') t = setTimeout(() => go('live'),   2100)
@@ -165,7 +196,7 @@ function RocketLaunch() {
   const uptime = `${pad(Math.floor(tick / 60))}:${pad(tick % 60)}`
 
   return (
-    <div className="relative w-full h-full select-none overflow-hidden">
+    <div ref={containerRef} className="relative w-full h-full select-none overflow-hidden">
       <style>{`
         @keyframes rl-star   { 0%,100%{opacity:.12} 50%{opacity:.65} }
         @keyframes rl-idle   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
@@ -390,6 +421,7 @@ export default function Process() {
     <section id="process" className="py-28 relative bg-black/60">
       {/* Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-grid" style={{ maskImage: 'linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)', WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)' }} />
         <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px]" />
         <div className="absolute top-1/2 right-1/4 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-[100px]" />
       </div>

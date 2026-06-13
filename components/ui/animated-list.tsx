@@ -15,6 +15,7 @@ type AnimatedListProps = {
   scaleFactor?: number
   scrollDownDuration?: number
   formationDuration?: number
+  paused?: boolean
 }
 
 type AnimatedListItemProps = {
@@ -117,6 +118,7 @@ export function AnimatedList({
   scaleFactor = 0.05,
   scrollDownDuration = 5,
   formationDuration = 1,
+  paused = false,
 }: AnimatedListProps) {
   const initialDelayValue = 500
   const loopPauseDurationValue = 100
@@ -137,16 +139,14 @@ export function AnimatedList({
 
   useEffect(() => {
     let timer: NodeJS.Timeout
-    if (animationPhase === "idle") {
+    if (!paused && animationPhase === 'idle') {
       timer = setTimeout(
-        () => {
-          setAnimationPhase("forming_column")
-        },
-        animationPhase === "idle" ? loopPauseDurationValue : initialDelayValue
+        () => { setAnimationPhase('forming_column') },
+        animationPhase === 'idle' ? loopPauseDurationValue : initialDelayValue
       )
     }
     return () => clearTimeout(timer)
-  }, [animationPhase, loopPauseDurationValue, initialDelayValue])
+  }, [animationPhase, loopPauseDurationValue, initialDelayValue, paused])
 
   const handleFormationComplete = () => {
     if (animationPhase === "forming_column") setAnimationPhase("scrolling_down")

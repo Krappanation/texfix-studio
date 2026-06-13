@@ -47,6 +47,7 @@ export function Globe({
     const size = canvas.offsetWidth || 300
     let phi = 0
     let rafId: number
+    let running = false
 
     const globe = createGlobe(canvas, {
       ...BASE_CONFIG,
@@ -61,12 +62,22 @@ export function Globe({
       rafId = requestAnimationFrame(animate)
     }
 
-    rafId = requestAnimationFrame(animate)
+    const startLoop = () => { if (!running) { running = true; animate() } }
+    const stopLoop  = () => { running = false; cancelAnimationFrame(rafId) }
+
+    // Pause WebGL when card is off-screen, resume when visible
+    const observer = new IntersectionObserver(
+      ([entry]) => entry.isIntersecting ? startLoop() : stopLoop(),
+      { threshold: 0 }
+    )
+    observer.observe(canvas)
+
     setTimeout(() => { canvas.style.opacity = '1' }, 100)
 
     return () => {
-      cancelAnimationFrame(rafId)
+      stopLoop()
       globe.destroy()
+      observer.disconnect()
     }
   }, [])
 

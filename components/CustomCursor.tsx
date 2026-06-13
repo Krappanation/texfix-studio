@@ -15,6 +15,29 @@ export default function CustomCursor() {
     let rafId: number
     let started = false
 
+    // Cache bento cards once — never query the DOM on every mousemove
+    let bentoCards: HTMLElement[] = []
+    const cacheBentoCards = () => {
+      bentoCards = Array.from(document.querySelectorAll<HTMLElement>('.bento-card'))
+    }
+    // Initial cache after a short delay so the DOM is ready
+    setTimeout(cacheBentoCards, 500)
+    // Re-cache on route change in case cards mount later
+    window.addEventListener('popstate', cacheBentoCards)
+
+    // Bento spotlight: only update cards that are currently near the cursor
+    // (checked inside the rAF loop — free since we're already running it)
+    const updateBentoSpotlight = () => {
+      for (const card of bentoCards) {
+        const rect = card.getBoundingClientRect()
+        // Skip cards nowhere near the viewport vertical slice of the cursor
+        if (mouseY < rect.top - 100 || mouseY > rect.bottom + 100) continue
+        card.style.setProperty('--mouse-x', `${mouseX - rect.left}px`)
+        card.style.setProperty('--mouse-y', `${mouseY - rect.top}px`)
+      }
+    }
+
+    // mousemove: only store coordinates — never touch the DOM here
     const onMove = (e: MouseEvent) => {
       mouseX = e.clientX
       mouseY = e.clientY
@@ -25,19 +48,16 @@ export default function CustomCursor() {
         started = true
         circle.classList.add('is-visible')
       }
-
-      document.querySelectorAll<HTMLElement>('.bento-card').forEach((card) => {
-        const rect = card.getBoundingClientRect()
-        card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`)
-        card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`)
-      })
     }
 
+    // Single rAF loop handles lerp + bento spotlight together
     const animate = () => {
       curX += (mouseX - curX) * 0.07
       curY += (mouseY - curY) * 0.07
       circle.style.transform = `translate(${curX}px, ${curY}px) translate(-50%, -50%)`
-      // If cursor is in service state but the element under it no longer has service-row, clear it
+
+      updateBentoSpotlight()
+
       if (circle.classList.contains('is-service')) {
         const el = document.elementFromPoint(mouseX, mouseY)
         if (!el?.closest('.service-row')) {
@@ -47,9 +67,6 @@ export default function CustomCursor() {
       rafId = requestAnimationFrame(animate)
     }
     animate()
-
-    const onEnter = () => circle.classList.add('is-hovering')
-    const onLeave = () => circle.classList.remove('is-hovering')
 
     const onDelegatedEnter = (e: MouseEvent) => {
       const target = e.target as Element
@@ -82,6 +99,7 @@ export default function CustomCursor() {
 
     return () => {
       window.removeEventListener('mousemove', onMove)
+      window.removeEventListener('popstate', cacheBentoCards)
       document.removeEventListener('mouseover', onDelegatedEnter)
       document.removeEventListener('mouseout', onDelegatedLeave)
       cancelAnimationFrame(rafId)

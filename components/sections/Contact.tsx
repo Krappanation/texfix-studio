@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
@@ -253,6 +253,8 @@ export default function Contact() {
         id="contact"
         className="relative w-full h-svh overflow-hidden hidden sm:block"
       >
+        {/* Grid background */}
+        <div className="absolute inset-0 z-[0] bg-grid pointer-events-none" style={{ maskImage: 'linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)', WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)' }} />
         {/* Radial blue tint — aurora shows through from layout */}
         <div className="absolute inset-0 pointer-events-none bg-radial-[circle_at_center] from-blue-500/8 via-transparent to-transparent" />
 
@@ -366,6 +368,7 @@ export default function Contact() {
 
       {/* ── Mobile: static CTA only ── */}
       <section id="contact-mobile" className="sm:hidden relative w-full min-h-svh flex flex-col items-center justify-center gap-8 px-6 bg-zinc-950/60">
+        <div className="absolute inset-0 bg-grid pointer-events-none" style={{ maskImage: 'linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)', WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)' }} />
         <div className="absolute inset-0 pointer-events-none bg-radial-[circle_at_center] from-blue-500/8 via-transparent to-transparent" />
         <div className="relative flex flex-col items-center text-center gap-6">
           <h2

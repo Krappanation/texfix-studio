@@ -41,29 +41,18 @@ export default function ScrollAnimations() {
         })
       })
 
-      // Process Steps Flip In
-      const processSteps = gsap.utils.toArray<Element>('.process-step')
-      if (processSteps.length) {
-        gsap.fromTo(
-          processSteps,
-          { rotationY: -90, opacity: 0, transformPerspective: 1000 },
-          {
-            scrollTrigger: { trigger: '#process', start: 'top 90%', toggleActions: 'play none none reverse' },
-            rotationY: 0, opacity: 1, duration: 0.85, ease: 'power3.out',
-            stagger: 0.2,
-          }
-        )
-      }
-
       cleanup = () => {
         lenis.destroy()
         gsap.ticker.remove(rafTicker)
       }
     }
 
-    init()
+    // Delay init until after all hero entry animations finish (~2.3s).
+    // GSAP/Lenis module evaluation is JS-heavy and would starve the CSS
+    // animation engine during the critical first-paint window.
+    const timer = setTimeout(init, 2000)
 
-    return () => { cleanup?.() }
+    return () => { clearTimeout(timer); cleanup?.() }
   }, [])
 
   return null

@@ -2,9 +2,9 @@
 
 import { useState, useRef, useEffect } from 'react'
 import gsap from 'gsap'
-import { IconCloud } from '@/components/ui/icon-cloud'
 import { AnimatedShinyButton } from '@/components/ui/animated-shiny-button'
 import { useReveal } from '@/hooks/use-reveal'
+import PageGrid from '@/components/PageGrid'
 import type React from 'react'
 
 function wordStyle(visible: boolean, delay: number): React.CSSProperties {
@@ -60,16 +60,6 @@ const QUOTE_LINES = [
   ['POSSIBLE.'],
 ]
 
-const TECH_SLUGS = [
-  'typescript', 'javascript', 'react', 'nextdotjs', 'nodedotjs',
-  'express', 'postgresql', 'prisma', 'amazonaws', 'firebase',
-  'docker', 'git', 'github', 'vercel', 'figma',
-  'tailwindcss', 'html5', 'css3', 'jest', 'visualstudiocode',
-]
-
-const TECH_ICONS = TECH_SLUGS.map(
-  (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
-)
 
 const ROW_CLOSED = 72
 const ROW_OPEN   = 320
@@ -152,6 +142,7 @@ export default function AboutPage() {
 
   return (
     <main className="min-h-screen bg-transparent text-white">
+      <PageGrid />
       <section className="relative flex items-center px-8 md:px-16 lg:px-28 pt-44 pb-12">
         {/* Blue bubble */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[80px] pointer-events-none" />
@@ -274,17 +265,6 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="hidden sm:flex flex-1 items-start justify-start min-h-[400px] sm:min-h-[220px] md:min-h-[400px] sm:ml-8 md:ml-32 mt-4">
-            <div
-              className="rounded-full border-2 border-white w-[340px] h-[340px] sm:w-[200px] sm:h-[200px] md:w-[340px] md:h-[340px] overflow-hidden flex items-center justify-center"
-              style={{
-                background: 'radial-gradient(ellipse at 35% 30%, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.03) 50%, transparent 100%)',
-                boxShadow: 'inset 0 2px 20px rgba(255,255,255,0.08), inset 0 -4px 12px rgba(0,0,0,0.4), 0 8px 32px rgba(0,0,0,0.5)',
-              }}
-            >
-              <IconCloud images={TECH_ICONS} />
-            </div>
-          </div>
         </div>
       </section>
 

@@ -46,7 +46,7 @@ export default function Navbar() {
     document.documentElement.style.overflow = 'hidden'
     document.documentElement.style.paddingRight = `${scrollbarWidth}px`
 
-    const { gsap } = await import('gsap')
+    const { default: gsap } = await import('gsap')
     const { CustomEase } = await import('gsap/CustomEase')
     gsap.registerPlugin(CustomEase)
     CustomEase.create('hop', '.87,0,.13,1')
@@ -62,19 +62,19 @@ export default function Navbar() {
 
     tl.to(overlay, {
       clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-      duration: 1,
+      duration: 0.6,
       ease: 'hop',
     }, '<')
-    .to(overlayContent, { yPercent: 0, duration: 1, ease: 'hop' }, '<')
-    .to(media, { opacity: 1, duration: 0.75, ease: 'power2.out' }, '-=0.3')
-    .to(links, { y: '0%', duration: 1.2, ease: 'hop', stagger: -0.06 }, '-=0.7')
+    .to(overlayContent, { yPercent: 0, duration: 0.6, ease: 'hop' }, '<')
+    .to(media, { opacity: 1, duration: 0.5, ease: 'power2.out' }, '-=0.2')
+    .to(links, { y: '0%', duration: 0.65, ease: 'hop', stagger: -0.04 }, '-=0.45')
   }
 
   const runClose = async () => {
     if (isAnimatingRef.current) return
     isAnimatingRef.current = true
 
-    const { gsap } = await import('gsap')
+    const { default: gsap } = await import('gsap')
     const { CustomEase } = await import('gsap/CustomEase')
     gsap.registerPlugin(CustomEase)
     CustomEase.create('hop', '.87,0,.13,1')
@@ -95,10 +95,10 @@ export default function Navbar() {
 
     tl.to(overlay, {
       clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
-      duration: 1,
+      duration: 0.55,
       ease: 'hop',
     }, '<')
-    .to(overlayContent, { yPercent: -50, duration: 1, ease: 'hop' }, '<')
+    .to(overlayContent, { yPercent: -50, duration: 0.55, ease: 'hop' }, '<')
   }
 
   const handleMenuToggle = () => {
