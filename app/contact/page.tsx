@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, type CSSProperties, useState } from 'react'
 import EstimationForm from '@/components/EstimationForm'
+import PageGrid from '@/components/PageGrid'
 
 const TITLE_LINES = [
   ['LET\'S'],
@@ -52,6 +53,7 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen bg-transparent text-white">
+      <PageGrid />
 
       {/* ── Hero ── */}
       <section className="relative flex items-start px-8 md:px-16 lg:px-28 pt-24 md:pt-44 pb-24">

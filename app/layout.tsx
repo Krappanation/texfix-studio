@@ -2,13 +2,11 @@ import type { Metadata } from 'next'
 import { Space_Grotesk, JetBrains_Mono, DM_Sans, Geist, Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
-import AuraBackground from '@/components/AuraBackground'
 import CustomCursor from '@/components/CustomCursor'
 import ScrollAnimations from '@/components/ScrollAnimations'
 import Footer from '@/components/Footer'
 import BeamDecor from '@/components/BeamDecor'
 import PageTransition from '@/components/PageTransition'
-import Preloader from '@/components/Preloader'
 import { cn } from "@/lib/utils";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
@@ -80,14 +78,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={cn("bg-black", "antialiased", spaceGrotesk.variable, jetbrainsMono.variable, dmSans.variable, plusJakarta.variable, "font-sans", geist.variable)}
     >
-      <head>
-        {/* Hide preloader before React hydrates if already seen — prevents flash */}
-        <script dangerouslySetInnerHTML={{ __html: `if(sessionStorage.getItem('preloader-shown')){document.head.insertAdjacentHTML('beforeend','<style>.preloader,.split-overlay,.tags-overlay{display:none!important}</style>')}` }} />
-      </head>
-      <body className="antialiased font-sans selection:bg-white/20 preloader-active">
-        <Preloader />
+
+      <body className="antialiased font-sans selection:bg-white/20">
         <div className="site-container">
-          <AuraBackground />
           <BeamDecor />
           <div className="noise" />
           <div className="scanlines" />

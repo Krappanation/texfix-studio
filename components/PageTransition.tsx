@@ -18,9 +18,9 @@ export default function PageTransition() {
     gsap.set(el, { scaleY: 1, transformOrigin: 'top', pointerEvents: 'none' })
     gsap.to(el, {
       scaleY: 0,
-      duration: 1,
+      duration: 0.5,
       ease: 'power4.inOut',
-      delay: 0.05,
+      delay: 0.02,
       onComplete: () => { navigating.current = false },
     })
   }, [pathname])
@@ -53,7 +53,7 @@ export default function PageTransition() {
       gsap.set(el, { scaleY: 0, transformOrigin: 'bottom', pointerEvents: 'all' })
       gsap.to(el, {
         scaleY: 1,
-        duration: 1,
+        duration: 0.45,
         ease: 'power4.inOut',
         onComplete: () => { router.push(href) },
       })

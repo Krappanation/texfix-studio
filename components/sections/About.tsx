@@ -1,5 +1,6 @@
 'use client'
 import { Icon } from '@iconify/react'
+import { useEffect, useRef, useState } from 'react'
 import { useReveal, wordStyle } from '@/hooks/use-reveal'
 import { cn } from '@/lib/utils'
 import { BentoGrid, BentoCard } from '@/components/ui/bento-grid'
@@ -75,9 +76,21 @@ function AgencyActivity({ name, description, icon, color, time }: ActivityItem) 
 }
 
 function AnimatedListBg() {
+  const wrapRef  = useRef<HTMLDivElement>(null)
+  const [paused, setPaused] = useState(true)  // start paused; resume on first visibility
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      ([entry]) => setPaused(!entry.isIntersecting),
+      { threshold: 0 }
+    )
+    if (wrapRef.current) obs.observe(wrapRef.current)
+    return () => obs.disconnect()
+  }, [])
+
   return (
-    <div className="absolute inset-0 overflow-hidden p-3 pt-6 [mask-image:linear-gradient(to_top,transparent_15%,#000_100%)]">
-      <AnimatedList>
+    <div ref={wrapRef} className="absolute inset-0 overflow-hidden p-3 pt-6 [mask-image:linear-gradient(to_top,transparent_15%,#000_100%)]">
+      <AnimatedList paused={paused}>
         {agencyActivity.map((item, i) => (
           <AgencyActivity key={i} {...item} />
         ))}
@@ -86,9 +99,7 @@ function AnimatedListBg() {
   )
 }
 
-// â”€â”€ Card 2 background: animated beam (AnimatedBeamBg imported from ui) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-
-// â”€â”€ Card 3 background: 3D scrolling tech stack marquee â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── Card 3 background: 3D scrolling tech stack marquee ──────────────────────
 const techTiles = [
   { icon: 'logos:react',           label: 'React',        bg: '#0e1e2e' },
   { icon: 'logos:nextjs-icon',     label: 'Next.js',      bg: '#111'    },
@@ -115,10 +126,10 @@ const techTiles = [
 function TechTile({ icon, label, bg }: { icon: string; label: string; bg: string }) {
   return (
     <div
-      className="flex flex-col items-center justify-center gap-1.5 rounded-xl border border-zinc-800/60 p-3 w-[72px] h-[72px]"
+      className="flex flex-col items-center justify-center gap-2 rounded-xl border border-zinc-800/60 p-4 w-[96px] h-[96px]"
       style={{ backgroundColor: bg }}
     >
-      <Icon icon={icon} className="text-2xl" />
+      <Icon icon={icon} className="text-4xl" />
       <span className="text-[9px] text-zinc-500 font-mono leading-none">{label}</span>
     </div>
   )
@@ -128,10 +139,11 @@ function TechGridBg() {
   const tiles = techTiles.map((t, i) => <TechTile key={i} {...t} />)
   return (
     <div className="absolute inset-0 [mask-image:linear-gradient(to_top,transparent_15%,#000_80%)] overflow-hidden">
-      <ThreeDMarquee items={tiles} columns={4} className="w-full h-full pt-4" />
+      <ThreeDMarquee items={tiles} columns={3} className="w-full h-full pt-4" />
     </div>
   )
 }
+
 
 // â”€â”€ Card 4 background: uptime / SLA visual â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const UPTIME = 0.999

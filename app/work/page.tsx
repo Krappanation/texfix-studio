@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Image from 'next/image'
 import { AnimatedShinyButton } from '@/components/ui/animated-shiny-button'
 import { useReveal } from '@/hooks/use-reveal'
+import PageGrid from '@/components/PageGrid'
 
 const TITLE_LINES = [
   ['IDEAS', 'THAT'],
@@ -198,6 +199,7 @@ export default function WorkPage() {
 
   return (
     <main className="min-h-screen bg-transparent text-white">
+      <PageGrid />
       <section className="relative flex items-start px-8 md:px-16 lg:px-28 pt-44 pb-24">
         {/* Blue bubble */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[80px] pointer-events-none" />
@@ -275,7 +277,7 @@ export default function WorkPage() {
 
       {/* Projects list */}
       <div className="px-8 md:px-16 lg:px-28 pb-0 relative" ref={containerRef}>
-        <div className="group/list flex flex-col w-full">
+        <div className="group/list flex flex-col w-full bg-black/50 backdrop-blur-[24px]">
           {projects.map((project, i) => {
             const isOpen = openProject === i
             return (
